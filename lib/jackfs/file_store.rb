@@ -5,7 +5,6 @@ rescue LoadError
 end
 
 require File.dirname(__FILE__) + '/adapters/file_adapter'
-require File.dirname(__FILE__) + '/adapters/s3_adapter'
 require File.dirname(__FILE__) + '/adapters/db_adapter'
 
 module Jackfs
@@ -39,7 +38,6 @@ module Jackfs
     def load_adapter
       adapter_type = YAML.load_file(File.join(@app_root,CONFIG_FILE))[@app_env.to_s]["adapter"].to_sym
       case adapter_type
-        when :s3 then Jackfs::S3Adapter.new(@app_root, @app_env)
         when :db then Jackfs::DbAdapter.new(@app_root, @app_env)
         else Jackfs::FileAdapter.new(@app_root, @app_env)
       end
