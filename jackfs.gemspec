@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'sqlite3', '1.3.13'
-  s.add_runtime_dependency 'sequel', '4.42.1'
-  s.add_development_dependency 'rspec', '3.5.0'
+  s.add_runtime_dependency 'sqlite3', '>= 1.0.0'
+  s.add_runtime_dependency 'sequel', '>= 4.0.0'
+  s.add_development_dependency 'rspec', '>= 3.0'
 end
