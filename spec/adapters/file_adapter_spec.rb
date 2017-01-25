@@ -13,7 +13,7 @@ describe "Jackfs File Adapter" do
   end
 
   it "should save a file to a configured location" do
-    Jackfs::FileAdapter.should be_true
+    Jackfs::FileAdapter.should be_truthy
     @fa.location.should == "tmp"
   end
 
