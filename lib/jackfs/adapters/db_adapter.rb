@@ -3,7 +3,7 @@ require 'fileutils'
 require 'uri'
 
 begin
-  require 'sequel/no_core_ext'
+  require 'sequel'
 rescue LoadError
   puts 'sequel gem is required to use file store'
 end

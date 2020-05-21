@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["team@jackrussellsoftware.com"]
   s.homepage    = ""
   s.summary     = 'This is a fs gem we use'
-  s.description = 'This is an description for the fs gem we use'
+  s.description = 'This is the fs gem we use'
 
   s.rubyforge_project = "jackfs"
 
